@@ -65,18 +65,7 @@ if (bookingForm) {
 
         }
 
-
-        /*
-            GANTI NOMOR DI BAWAH DENGAN
-            NOMOR WHATSAPP KAMU.
-
-            Contoh:
-            081234567890
-            menjadi:
-            6281234567890
-        */
-
-        const nomorWhatsApp = "628XXXXXXXXXX";
+        const nomorWhatsApp = "6281997889727";
 
 
         const pesan =
