@@ -1,299 +1,256 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-    /* ========================================
-       MOBILE MENU
-    ======================================== */
+/* =====================================
+   MENU MOBILE
+===================================== */
 
-    const menuButton = document.getElementById("menuButton");
-    const navMenu = document.getElementById("navMenu");
+const menuButton = document.getElementById("menuButton");
+const navMenu = document.getElementById("navMenu");
 
-    if (menuButton && navMenu) {
+if (menuButton && navMenu) {
 
-        menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
 
-            const isOpen = navMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
 
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
+        if (navMenu.classList.contains("active")) {
+            menuButton.textContent = "✕";
+        } else {
+            menuButton.textContent = "☰";
+        }
 
-            menuButton.textContent = isOpen ? "×" : "☰";
-
-        });
+    });
 
 
-        navMenu.querySelectorAll("a").forEach(link => {
+    // Tutup menu setelah memilih menu
+    navMenu.querySelectorAll("a").forEach(link => {
 
-            link.addEventListener("click", () => {
+        link.addEventListener("click", () => {
 
-                navMenu.classList.remove("active");
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuButton.textContent = "☰";
-
-            });
+            navMenu.classList.remove("active");
+            menuButton.textContent = "☰";
 
         });
 
-    }
+    });
+
+}
 
 
-    /* ========================================
-       PRICE CALCULATOR
-    ======================================== */
+/* =====================================
+   BOOKING WHATSAPP
+===================================== */
 
-    const packageSelect =
-        document.getElementById("packageSelect");
+const bookingForm = document.getElementById("bookingForm");
 
-    const peopleInput =
-        document.getElementById("peopleInput");
+if (bookingForm) {
 
-    const totalPrice =
-        document.getElementById("totalPrice");
+    bookingForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
 
 
-    function calculatePrice() {
+        const nama = document.getElementById("nama").value.trim();
+        const telepon = document.getElementById("telepon").value.trim();
+        const merek = document.getElementById("merek").value;
+        const model = document.getElementById("model").value.trim();
+        const masalah = document.getElementById("masalah").value;
+        const deskripsi = document.getElementById("deskripsi").value.trim();
 
-        if (!packageSelect || !peopleInput || !totalPrice) {
+
+        if (!nama || !telepon || !merek || !model || !masalah) {
+
+            alert("Mohon lengkapi semua data booking.");
+
             return;
-        }
-
-        const price =
-            Number(packageSelect.value) || 0;
-
-        const people =
-            Number(peopleInput.value) || 0;
-
-        const total = price * people;
-
-        totalPrice.textContent =
-            "$" + total.toLocaleString("en-US");
-
-    }
-
-
-    if (packageSelect && peopleInput) {
-
-        packageSelect.addEventListener(
-            "change",
-            calculatePrice
-        );
-
-        peopleInput.addEventListener(
-            "input",
-            calculatePrice
-        );
-
-    }
-
-
-    /* ========================================
-       GALLERY LIGHTBOX
-    ======================================== */
-
-    const galleryImages =
-        document.querySelectorAll(".gallery-image");
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    const lightboxImage =
-        document.getElementById("lightboxImage");
-
-    const lightboxClose =
-        document.getElementById("lightboxClose");
-
-
-    if (lightbox && lightboxImage && lightboxClose) {
-
-        galleryImages.forEach(image => {
-
-            image.addEventListener("click", () => {
-
-                lightboxImage.src = image.src;
-                lightboxImage.alt = image.alt;
-
-                lightbox.classList.add("active");
-
-                document.body.style.overflow = "hidden";
-
-            });
-
-        });
-
-
-        function closeLightbox() {
-
-            lightbox.classList.remove("active");
-
-            document.body.style.overflow = "";
 
         }
 
 
-        lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-        );
+        /*
+            GANTI NOMOR DI BAWAH DENGAN
+            NOMOR WHATSAPP KAMU.
 
+            Contoh:
+            081234567890
+            menjadi:
+            6281234567890
+        */
 
-        lightbox.addEventListener("click", event => {
+        const nomorWhatsApp = "628XXXXXXXXXX";
 
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
 
-        });
+        const pesan =
 
+`Halo PrintFix 👋
 
-        document.addEventListener("keydown", event => {
+Saya ingin melakukan booking servis printer.
 
-            if (event.key === "Escape") {
-                closeLightbox();
-            }
+👤 Nama:
+${nama}
 
-        });
+📱 No. WhatsApp:
+${telepon}
 
-    }
+🖨️ Merek:
+${merek}
 
+📋 Model:
+${model}
 
-    /* ========================================
-       BOOKING FORM
-    ======================================== */
+🔧 Masalah:
+${masalah}
 
-    const bookingForm =
-        document.getElementById("bookingForm");
+📝 Detail masalah:
+${deskripsi || "Tidak ada keterangan tambahan."}
 
+Mohon informasi untuk proses selanjutnya. Terima kasih 🙏`;
 
-    if (bookingForm) {
 
-        bookingForm.addEventListener("submit", event => {
+        const url =
+            "https://wa.me/" +
+            nomorWhatsApp +
+            "?text=" +
+            encodeURIComponent(pesan);
 
-            event.preventDefault();
 
+        window.open(url, "_blank");
 
-            const name =
-                document.getElementById("nameInput")
-                    .value.trim();
+    });
 
+}
 
-            const email =
-                document.getElementById("emailInput")
-                    .value.trim();
 
+/* =====================================
+   NAVBAR SCROLL EFFECT
+===================================== */
 
-            const packageSelectElement =
-                document.getElementById("packageSelect");
+const navbar = document.querySelector(".navbar");
 
+window.addEventListener("scroll", () => {
 
-            const packageName =
-                packageSelectElement.options[
-                    packageSelectElement.selectedIndex
-                ].text;
+    if (window.scrollY > 30) {
 
+        navbar.style.background = "rgba(8,11,16,.96)";
 
-            const people =
-                document.getElementById("peopleInput")
-                    .value;
+    } else {
 
-
-            const date =
-                document.getElementById("dateInput")
-                    .value;
-
-
-            const country =
-                document.getElementById("countryInput")
-                    .value.trim();
-
-
-            const message =
-                document.getElementById("messageInput")
-                    .value.trim();
-
-
-            const price =
-                Number(packageSelectElement.value) || 0;
-
-
-            const total =
-                price * Number(people);
-
-
-            const whatsappMessage =
-
-`Hello Andreas Expedition!
-
-I would like to make a trekking booking.
-
-Name:
-${name}
-
-Email:
-${email}
-
-Country:
-${country}
-
-Trekking Package:
-${packageName}
-
-Number of People:
-${people}
-
-Trekking Date:
-${date}
-
-Estimated Total:
-$${total.toLocaleString("en-US")}
-
-Additional Message:
-${message || "None"}
-
-Thank you!`;
-
-
-            const phoneNumber =
-                "6281997889727";
-
-
-            const whatsappURL =
-                "https://wa.me/" +
-                phoneNumber +
-                "?text=" +
-                encodeURIComponent(whatsappMessage);
-
-
-            window.open(
-                whatsappURL,
-                "_blank"
-            );
-
-        });
-
-    }
-
-
-    /* ========================================
-       SET MINIMUM BOOKING DATE
-    ======================================== */
-
-    const dateInput =
-        document.getElementById("dateInput");
-
-
-    if (dateInput) {
-
-        const today =
-            new Date().toISOString().split("T")[0];
-
-        dateInput.min = today;
+        navbar.style.background = "rgba(8,11,16,.82)";
 
     }
 
 });
+
+
+/* =====================================
+   SIMPLE REVEAL ANIMATION
+===================================== */
+
+const revealElements = document.querySelectorAll(
+    ".service-card, .price-card, .process-item, .gallery-item"
+);
+
+const revealObserver = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.1
+    }
+);
+
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(25px)";
+    element.style.transition = "opacity .6s ease, transform .6s ease";
+
+    revealObserver.observe(element);
+
+});
+
+
+
+
+
+
+
+
+
+/* =========================
+   SATELLITE MAP
+========================= */
+
+// Koordinat lokasi Akar Akar, Bayan, Lombok Utara
+const latitude = -8.2475;
+const longitude = 116.4145;
+
+// Buat map
+const map = L.map('satellite-map').setView(
+    [latitude, longitude],
+    17
+);
+
+
+// SATELLITE IMAGERY
+L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {
+        maxZoom: 19,
+        attribution:
+            'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics'
+    }
+).addTo(map);
+
+
+// MARKER
+const marker = L.marker([
+    latitude,
+    longitude
+]).addTo(map);
+
+
+// POPUP
+marker.bindPopup(`
+    <div style="text-align:center;">
+        <h3 style="margin-bottom:8px;">
+            Service Printer JosJis
+        </h3>
+
+        <p style="margin:0;">
+            Jasa Servis Printer
+        </p>
+
+        <p style="font-size:12px;color:#aaa;">
+            Andalan, Bayan<br>
+            Lombok Utara, NTB
+        </p>
+    </div>
+`).openPopup();
+
+
+// LINGKARAN AREA
+L.circle(
+    [latitude, longitude],
+    {
+        radius: 100,
+        color: '#ff7a00',
+        fillColor: '#ff7a00',
+        fillOpacity: 0.12,
+        weight: 2
+    }
+).addTo(map);
+

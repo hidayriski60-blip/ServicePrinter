@@ -1,970 +1,657 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+    <title>PrintFix | Jasa Servis Printer</title>
+    <meta name="description" content="Jasa servis printer, cleaning, perbaikan printer dan isi ulang tinta. Cepat, profesional dan terpercaya.">
 
-    <meta name="description"
-        content="Andreas Expedition - Rinjani trekking and mountain adventure in Lombok, Indonesia.">
-
-    <title>Rinjani Whiterose | Tour & Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVBAR -->
     <header class="navbar">
+        <div class="container nav-container">
 
-        <a href="#home" class="logo">
-            RINJANI<span>WHITEROSE</span>
-        </a>
+            <a href="#home" class="logo">
+                <span class="logo-icon">🖨️</span>
+                <span>ServicePrinter<span>JosJis</span></span>
+            </a>
 
-        <nav class="nav-menu" id="navMenu">
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#harga">Harga</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#booking">Booking</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
 
-            <a href="#home">Home</a>
-            <a href="#packages">Trekking</a>
-            <a href="#experience">Experience</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#about">About</a>
-            <a href="#booking">Booking</a>
+            <a href="#booking" class="nav-button">Servis Sekarang</a>
 
-        </nav>
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
 
-        <a href="#packages" class="nav-button">
-            Explore
-        </a>
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open menu"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
+        </div>
     </header>
 
 
-    <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-        <!-- ================= HERO ================= -->
+        <div class="hero-bg"></div>
 
-        <section class="hero" id="home">
-
-            <div class="hero-bg"></div>
-            <div class="hero-overlay"></div>
+        <div class="container hero-container">
 
             <div class="hero-content">
 
-                <p class="eyebrow">
-                    LOMBOK • INDONESIA
-                </p>
-
-                <div class="hero-title">
-
-                    <h1>
-                        TRACKING
-                        <br>
-                        <span>& TRAVEL</span>
-                    </h1>
-
-                   
-
+                <div class="badge">
+                    <span></span>
+                    Menerima Servis Printer
                 </div>
 
-                <p class="hero-description">
-                    Experience the legendary Mount Rinjani
-                    with local guides, unforgettable views
-                    and authentic mountain adventures.
+                <h1>
+                    Printer Rusak?
+                    <strong>Kami Siap Perbaiki.</strong>
+                </h1>
+
+                <p>
+                    Jasa servis printer terpercaya untuk berbagai masalah
+                    printer. Mulai dari printer tidak mencetak, tinta mampet,
+                    hasil print bergaris hingga masalah error.
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#packages" class="button primary">
-                        Explore Treks
+                    <a href="#booking" class="btn btn-primary">
+                        🔧 Booking Servis
                     </a>
 
-                    <a href="#experience" class="button secondary">
-                        Discover Experience
+                    <a href="https://wa.me/081997889727" class="btn btn-outline" target="_blank">
+                        Chat WhatsApp
                     </a>
+                </div>
+
+                <div class="hero-stats">
 
                 </div>
 
             </div>
 
 
-            <div class="hero-bottom">
+            <div class="hero-printer">
 
-                <div class="hero-location">
-                    <span>LOCATION</span>
-                    <strong>Mount Rinjani</strong>
+                <div class="printer-glow"></div>
+
+                <div class="printer-card">
+
+                    <div class="printer-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="printer-screen">
+                        <div class="screen-icon">🖨️</div>
+                        <div>READY TO PRINT</div>
+                    </div>
+
+                    <div class="printer-paper">
+                        <div class="paper-line"></div>
+                        <div class="paper-line short"></div>
+                        <div class="paper-line"></div>
+                        <div class="paper-line medium"></div>
+                    </div>
+
+                    <div class="printer-slot"></div>
+
+                    <div class="printer-bottom"></div>
+
                 </div>
 
-                <div class="hero-scroll">
-                    SCROLL TO EXPLORE ↓
+                <div class="floating-card card-one">
+                    <span>✓</span>
+                    Cleaning Printer
                 </div>
 
-                <div class="hero-location right">
-                    <span>HEIGHT</span>
-                    <strong>3,726 MDPL</strong>
+                <div class="floating-card card-two">
+                    <span>⚡</span>
+                    Respon Cepat
                 </div>
 
             </div>
 
-        </section>
+        </div>
+    </section>
 
 
-        <!-- ================= INTRO ================= -->
+    <!-- TRUST -->
+    <section class="trust">
+        <div class="container trust-container">
 
-        <section class="intro">
+            <div>
+                <strong>Servis berbagai merek printer</strong>
+                <span>Canon • Epson • HP • Brother • dan lainnya</span>
+            </div>
 
-            <p class="eyebrow">
-                THE MOUNTAIN
-            </p>
+            <div class="trust-icons">
+                <span>CANON</span>
+                <span>EPSON</span>
+                <span>HP</span>
+                <span>BROTHER</span>
+            </div>
 
-            <h2>
-                More Than<br>
-                Just A Trek.
-            </h2>
-
-            <p class="intro-text">
-                Mount Rinjani is one of Indonesia's most
-                spectacular mountain destinations. Walk
-                through forests, camp beneath the stars
-                and witness sunrise above the clouds.
-            </p>
-
-        </section>
+        </div>
+    </section>
 
 
-        <!-- ================= PACKAGES ================= -->
+    <!-- LAYANAN -->
+    <section class="section" id="layanan">
 
-        <section class="packages" id="packages">
+        <div class="container">
 
             <div class="section-heading">
 
-                <div>
-
-                    <p class="eyebrow">
-                        TREKKING PACKAGES
-                    </p>
-
-                    <h2>
-                        Choose Your<br>
-                        Adventure.
-                    </h2>
-
+                <div class="section-label">
+                    LAYANAN KAMI
                 </div>
 
-                <p>
-                    From short crater adventures to
-                    challenging summit expeditions.
-                </p>
-
-            </div>
-
-
-            <div class="package-grid">
-
-
-                <article class="package-card">
-
-                    <div class="package-image">
-                        <img
-                            src="Gambar/sunrise.jpg"
-                            alt="Senaru crater trekking"
-                        >
-                    </div>
-
-                    <div class="package-content">
-
-                        <span>3D/4N</span>
-
-                        <h3>
-                            Senaru Crater
-                        </h3>
-
-                        <p>
-                            A shorter adventure for travelers
-                            who want to experience the beauty
-                            of Rinjani without climbing to the summit.
-                        </p>
-
-                        <div class="package-bottom">
-
-                            <strong>
-                                $120
-                            </strong>
-
-                            <a href="#booking">
-                                Book →
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="package-card featured">
-
-                    <div class="package-image">
-                        <img
-                            src="Gambar/sunrise.jpg"
-                            alt="Rinjani summit sunrise"
-                        >
-                    </div>
-
-                    <div class="package-content">
-
-                        <span>2D/3N</span>
-
-                        <h3>
-                            Rinjani Summit
-                        </h3>
-
-                        <p>
-                            Challenge yourself and witness
-                            an unforgettable sunrise from
-                            the summit of Mount Rinjani.
-                        </p>
-
-                        <div class="package-bottom">
-
-                            <strong>
-                                $150
-                            </strong>
-
-                            <a href="#booking">
-                                Book →
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="package-card">
-
-                    <div class="package-image">
-                        <img
-                            src="Gambar/camping.jpg"
-                            alt="Camping on Mount Rinjani"
-                        >
-                    </div>
-
-                    <div class="package-content">
-
-                        <span>1D/2N</span>
-
-                        <h3>
-                            Full Experience
-                        </h3>
-
-                        <p>
-                            Enjoy the complete Rinjani adventure
-                            with camping, crater views, sunrise
-                            and summit trekking.
-                        </p>
-
-                        <div class="package-bottom">
-
-                            <strong>
-                                $200
-                            </strong>
-
-                            <a href="#booking">
-                                Book →
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= TREK DETAIL ================= -->
-
-        <section class="trek-detail" id="experience">
-
-            <div class="trek-header">
-
-                <p class="eyebrow">
-                    RINJANI SUMMIT
-                </p>
-
                 <h2>
-                    2 Days / 1 Night
+                    Solusi untuk berbagai
+                    <span>masalah printer</span>
                 </h2>
 
                 <p>
-                    A challenging journey to the summit
-                    followed by an unforgettable sunrise
-                    over Lombok.
+                    Tidak perlu bingung ketika printer bermasalah.
+                    Kami membantu melakukan pengecekan dan perbaikan
+                    sesuai kerusakan printer.
                 </p>
 
             </div>
 
 
-            <div class="trek-info">
+            <div class="service-grid">
 
-                <div>
-                    <span>DIFFICULTY</span>
-                    <strong>Challenging</strong>
-                </div>
-
-                <div>
-                    <span>DURATION</span>
-                    <strong>2 Days / 1 Night</strong>
-                </div>
-
-                <div>
-                    <span>START</span>
-                    <strong>Senaru / Sembalun</strong>
-                </div>
-
-                <div>
-                    <span>GROUP</span>
-                    <strong>2 - 10 People</strong>
-                </div>
-
-            </div>
-
-
-            <div class="itinerary">
-
-                <article class="day">
-
-                    <span>DAY 01</span>
-
-                    <h3>
-                        Into The Mountain
-                    </h3>
-
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Servis Printer</h3>
                     <p>
-                        Begin your journey through the
-                        forest before reaching the campsite.
+                        Perbaikan printer yang error, tidak menyala,
+                        tidak menarik kertas atau mengalami masalah lainnya.
                     </p>
+                    <a href="#booking">Pesan layanan →</a>
+                </div>
 
-                    <ul>
-                        <li>Morning trekking</li>
-                        <li>Lunch on the trail</li>
-                        <li>Camp setup</li>
-                        <li>Sunset at campsite</li>
-                        <li>Dinner & overnight camping</li>
-                    </ul>
-
-                </article>
-
-
-                <article class="day">
-
-                    <span>DAY 02</span>
-
-                    <h3>
-                        Summit & Sunrise
-                    </h3>
-
+                <div class="service-card">
+                    <div class="service-icon">🧼</div>
+                    <h3>Cleaning Printer</h3>
                     <p>
-                        Wake up before dawn and begin
-                        the final climb toward the summit.
+                        Membersihkan bagian printer dan print head
+                        untuk mengatasi hasil cetak yang buruk.
                     </p>
-
-                    <ul>
-                        <li>Early summit climb</li>
-                        <li>Sunrise at the summit</li>
-                        <li>Return to campsite</li>
-                        <li>Breakfast</li>
-                        <li>Descend the mountain</li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-
-            <div class="included">
-
-                <div>
-
-                    <h3>
-                        What's Included
-                    </h3>
-
-                    <ul>
-                        <li>Local trekking guide</li>
-                        <li>Camping tent</li>
-                        <li>Sleeping bag</li>
-                        <li>Meals during trek</li>
-                        <li>Drinking water</li>
-                        <li>Porter service</li>
-                    </ul>
-
+                    <a href="#booking">Pesan layanan →</a>
                 </div>
 
-                <div>
-
-                    <h3>
-                        Not Included
-                    </h3>
-
-                    <ul>
-                        <li>Personal equipment</li>
-                        <li>Travel insurance</li>
-                        <li>Personal expenses</li>
-                        <li>Transportation to Lombok</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="trek-book">
-
-                <div>
-
-                    <span>STARTING FROM</span>
-
-                    <strong>
-                        $150 / person
-                    </strong>
-
-                </div>
-
-                <a href="#booking" class="button primary">
-                    Book This Trek
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= EXPERIENCE ================= -->
-
-        <section class="experience" id="about">
-
-            <div class="experience-image">
-
-                <img
-                    src="Gambar/galeri10.jpeg"
-                    alt="Local Rinjani trekking guide"
-                >
-
-            </div>
-
-            <div class="experience-content">
-
-                <p class="eyebrow">
-                    THE EXPERIENCE
-                </p>
-
-                <h2>
-                    Trek Rinjani<br>
-                    With Locals.
-                </h2>
-
-                <p>
-                    Our local guides know the mountain,
-                    the trails and the culture of Lombok.
-                </p>
-
-                <p>
-                    From your first step to the final sunrise,
-                    we'll be there to guide your journey.
-                </p>
-
-                <a href="#booking" class="button primary">
-                    Start Your Journey
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= GALLERY ================= -->
-
-        <section class="gallery" id="gallery">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="eyebrow">
-                        GALLERY
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Isi Ulang Tinta</h3>
+                    <p>
+                        Pengisian tinta printer dengan prosedur yang
+                        tepat agar printer dapat digunakan kembali.
                     </p>
+                    <a href="#booking">Pesan layanan →</a>
+                </div>
 
-                    <h2>
-                        The Mountain<br>
-                        Awaits.
-                    </h2>
+                <div class="service-card">
+                    <div class="service-icon">🖨️</div>
+                    <h3>Print Head</h3>
+                    <p>
+                        Penanganan masalah print head seperti mampet,
+                        hasil print bergaris atau warna tidak keluar.
+                    </p>
+                    <a href="#booking">Pesan layanan →</a>
+                </div>
 
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>Paper Jam</h3>
+                    <p>
+                        Mengatasi kertas macet, printer tidak menarik
+                        kertas dan masalah roller printer.
+                    </p>
+                    <a href="#booking">Pesan layanan →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Maintenance</h3>
+                    <p>
+                        Perawatan printer secara berkala agar printer
+                        tetap bekerja optimal dan lebih awet.
+                    </p>
+                    <a href="#booking">Pesan layanan →</a>
                 </div>
 
             </div>
-
-
-            <div class="gallery-grid">
-
-                  <img
-                    src="Gambar/galeri5.jpeg"
-                    alt="Mount Rinjani"
-                    class="gallery-image"
-                >
-
-
-                  <img
-                    src="Gambar/galeri3.jpeg"
-                    alt="Mount Rinjani"
-                    class="gallery-image"
-                >
-
-
-                  <img
-                    src="Gambar/galeri2.jpeg"
-                    alt="Mount Rinjani"
-                    class="gallery-image"
-                >
-
-
-                 <img
-                    src="Gambar/galeri1.jpeg"
-                    alt="Mount Rinjani"
-                    class="gallery-image"
->
-                <img
-                    src="Gambar/galeri4.jpeg"
-                    alt="Mount Rinjani"
-                    class="gallery-image"
-                >
-
-                <img
-                    src="Gambar/camping.jpg"
-                    alt="Camping on Mount Rinjani"
-                    class="gallery-image"
-                >
-
-                <img
-                    src="Gambar/sunrise.jpg"
-                    alt="Rinjani sunrise"
-                    class="gallery-image"
-                >
-
-                <img
-                    src="Gambar/guide.jpg"
-                    alt="Rinjani trekking guide"
-                    class="gallery-image"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= LIGHTBOX ================= -->
-
-        <div class="lightbox" id="lightbox">
-
-            <button
-                class="lightbox-close"
-                id="lightboxClose"
-                aria-label="Close image"
-            >
-                x
-            </button>
-
-            <img
-                id="lightboxImage"
-                src=""
-                alt=""
-            >
 
         </div>
 
+    </section>
 
-        <!-- ================= WHY US ================= -->
 
-        <section class="why-us">
+    <!-- PROSES -->
+    <section class="process-section">
+
+        <div class="container">
 
             <div class="section-heading">
 
-                <div>
+                <div class="section-label">
+                    CARA SERVIS
+                </div>
 
-                    <p class="eyebrow">
-                        WHY ANDREAS
+                <h2>
+                    Servis printer
+                    <span>mudah & cepat</span>
+                </h2>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-item">
+                    <div class="process-number">01</div>
+                    <h3>Hubungi Kami</h3>
+                    <p>
+                        Ceritakan masalah printer melalui WhatsApp.
                     </p>
+                </div>
 
-                    <h2>
-                        Your Mountain.<br>
-                        Our Expertise.
-                    </h2>
+                <div class="process-item">
+                    <div class="process-number">02</div>
+                    <h3>Printer Dicek</h3>
+                    <p>
+                        Kami melakukan pengecekan untuk mengetahui
+                        sumber masalah.
+                    </p>
+                </div>
 
+                <div class="process-item">
+                    <div class="process-number">03</div>
+                    <h3>Perbaikan</h3>
+                    <p>
+                        Printer diperbaiki sesuai hasil pengecekan.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-number">04</div>
+                    <h3>Test & Selesai</h3>
+                    <p>
+                        Printer dites sebelum dikembalikan kepada pelanggan.
+                    </p>
                 </div>
 
             </div>
 
+        </div>
 
-            <div class="features">
-
-                <article class="feature">
-                    <span>01</span>
-                    <h3>Local Guides</h3>
-                    <p>
-                        Experienced local guides
-                        who know Rinjani.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <span>02</span>
-                    <h3>Safety First</h3>
-                    <p>
-                        Your safety is always
-                        our highest priority.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <span>03</span>
-                    <h3>Small Groups</h3>
-                    <p>
-                        Smaller groups create
-                        better trekking experiences.
-                    </p>
-                </article>
-
-                <article class="feature">
-                    <span>04</span>
-                    <h3>Local Experience</h3>
-                    <p>
-                        Discover Rinjani beyond
-                        the usual tourist route.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- ================= BOOKING ================= -->
+   
+    <!-- BOOKING -->
+    <section class="section booking-section" id="booking">
 
-        <section class="booking" id="booking">
+        <div class="container booking-container">
 
-            <div class="booking-heading">
+            <div class="booking-info">
 
-                <p class="eyebrow">
-                    START YOUR ADVENTURE
-                </p>
+                <div class="section-label">
+                    BOOKING SERVIS
+                </div>
 
                 <h2>
-                    Ready To Trek Rinjani?
+                    Printer kamu
+                    <span>bermasalah?</span>
                 </h2>
 
                 <p>
-                    Tell us about your trip and
-                    we'll get back to you.
+                    Isi formulir di samping. Setelah menekan tombol
+                    booking, detail servis akan otomatis dibuat dan
+                    diarahkan ke WhatsApp.
                 </p>
+
+                <div class="contact-points">
+
+                    <div>
+                        <span>📱</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <small>Respon cepat</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>📍</span>
+                        <div>
+                            <strong>Area Servis</strong>
+                            <small>Sesuaikan dengan lokasi kamu</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>⏰</span>
+                        <div>
+                            <strong>Jam Operasional</strong>
+                            <small>08.00 - 20.00</small>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <form id="bookingForm">
+            <form class="booking-form" id="bookingForm">
 
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="nameInput">
-                            Full Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nameInput"
-                            placeholder="Your full name"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="emailInput">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="emailInput"
-                            placeholder="your@email.com"
-                            required
-                        >
-
-                    </div>
-
+                <div class="form-title">
+                    <h3>Form Booking</h3>
+                    <p>Isi data printer kamu</p>
                 </div>
 
-
                 <div class="form-row">
 
                     <div class="form-group">
-
-                        <label for="packageSelect">
-                            Trekking Package
-                        </label>
-
-                        <select id="packageSelect" required>
-
-                            <option value="">
-                                Select a package
-                            </option>
-
-                            <option value="120">
-                                3N/4D — $120
-                            </option>
-
-                            <option value="150">
-                                2N/3D — $150
-                            </option>
-
-                            <option value="200">
-                                1N/2D — $200
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="peopleInput">
-                            Number of People
-                        </label>
-
-                        <input
-                            type="number"
-                            id="peopleInput"
-                            min="1"
-                            value="1"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="dateInput">
-                            Trekking Date
-                        </label>
-
-                        <input
-                            type="date"
-                            id="dateInput"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="countryInput">
-                            Country
-                        </label>
-
+                        <label>Nama</label>
                         <input
                             type="text"
-                            id="countryInput"
-                            placeholder="Your country"
+                            id="nama"
+                            placeholder="Nama kamu"
                             required
                         >
+                    </div>
 
+                    <div class="form-group">
+                        <label>No. WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="telepon"
+                            placeholder="08xxxxxxxxxx"
+                            required
+                        >
                     </div>
 
                 </div>
 
 
                 <div class="form-group">
+                    <label>Merek Printer</label>
 
-                    <label for="messageInput">
-                        Message
-                    </label>
+                    <select id="merek" required>
+                        <option value="">Pilih merek</option>
+                        <option>Epson</option>
+                        <option>Canon</option>
+                        <option>HP</option>
+                        <option>Brother</option>
+                        <option>Samsung</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Model Printer</label>
+
+                    <input
+                        type="text"
+                        id="model"
+                        placeholder="Contoh: Epson L3110"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label>Jenis Masalah</label>
+
+                    <select id="masalah" required>
+                        <option value="">Pilih masalah</option>
+                        <option>Printer tidak menyala</option>
+                        <option>Printer tidak bisa print</option>
+                        <option>Tinta tidak keluar</option>
+                        <option>Hasil print bergaris</option>
+                        <option>Warna tidak keluar</option>
+                        <option>Kertas macet</option>
+                        <option>Cleaning printer</option>
+                        <option>Isi ulang tinta</option>
+                        <option>Masalah lainnya</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Deskripsi masalah</label>
 
                     <textarea
-                        id="messageInput"
-                        rows="5"
-                        placeholder="Tell us about your trip..."
+                        id="deskripsi"
+                        rows="4"
+                        placeholder="Ceritakan masalah printer kamu..."
                     ></textarea>
-
                 </div>
 
 
-                <div class="booking-total">
-
-                    <span>
-                        ESTIMATED TOTAL
-                    </span>
-
-                    <strong id="totalPrice">
-                        $0
-                    </strong>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="submit-button"
-                >
-                    Send Booking Request →
+                <button type="submit" class="submit-button">
+                    Kirim Booking via WhatsApp →
                 </button>
 
             </form>
 
-        </section>
-
-
-        <!-- ================= CONTACT ================= -->
-
-        <section class="contact">
-
-            <p class="eyebrow">
-                HAVE QUESTIONS?
-            </p>
-
-            <h2>
-                Let's Talk About<br>
-                Your Adventure.
-            </h2>
-
-            <a href="mailto:hello@andreasexpedition.com">
-                hello@andreasexpedition.com
-            </a>
-
-        </section>
-
-        <!-- ================= LOCATION ================= -->
-
-<section class="location-section" id="location">
-
-    <div class="location-heading">
-
-        <p class="eyebrow">
-            FIND US
-        </p>
-
-        <h2>
-            Start Your Journey<br>
-            From Here.
-        </h2>
-
-        <p>
-            Visit our basecamp in Senaru and
-            get ready for your Rinjani adventure.
-        </p>
-
-    </div>
-
-
-    <div class="location-wrapper">
-
-        <div class="location-map">
-
-            <iframe
-                src="https://www.google.com/maps?q=Senaru,+Lombok+Utara,+Nusa+Tenggara+Barat&output=embed"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
         </div>
 
+    </section>
 
-        <div class="location-info">
 
-            <span>
-                OUR BASECAMP
-            </span>
+    <!-- CONTACT -->
+    <section class="contact-section" id="kontak">
 
-            <h3>
-                Rinjani Whiterose
-            </h3>
+        <div class="container contact-container">
 
-            <p>
-                Senaru, Bayan<br>
-                Lombok Utara<br>
-                Nusa Tenggara Barat, Indonesia
-            </p>
+            <div>
+                <div class="section-label">
+                    HUBUNGI KAMI
+                </div>
+
+                <h2>
+                    Butuh bantuan
+                    <span>servis printer?</span>
+                </h2>
+
+                <p>
+                    Jangan biarkan printer rusak menghambat pekerjaanmu.
+                    Hubungi kami sekarang.
+                </p>
+            </div>
 
             <a
-                href="https://www.google.com/maps/search/?api=1&query=Senaru,+Lombok+Utara,+Nusa+Tenggara+Barat"
+                href="https://wa.me/081997889727"
                 target="_blank"
-                rel="noopener"
-                class="location-button"
+                class="contact-button"
             >
-                Get Directions →
+                Chat WhatsApp
             </a>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+ 
+<!-- LOCATION -->
+<section class="location-section" id="lokasi">
+    <div class="container">
 
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            RINJANI WHITEROSE
+        <div class="section-header">
+            <span class="section-tag">LOKASI</span>
+            <h2>Temukan Lokasi <span>Servis Kami</span></h2>
+            <p>
+                Chat dulu sebelum datang ke lokasi, Karena saya jarang di rumah.
+            </p>
         </div>
 
-        <p>
-            © 2026 Rinjani Whiterose.
-            All rights reserved.
-        </p>
+        <div class="location-grid">
+
+            <!-- INFO LOKASI -->
+            <div class="location-info">
+
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <div>
+                        <h3>Alamat</h3>
+                        <p>
+                            P9F6+5QF, Akar Akar, Kec. Bayan,
+                            Kabupaten Lombok Utara,
+                            Nusa Tenggara Barat 83354
+                        </p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">🕐</div>
+                    <div>
+                        <h3>Jam Operasional</h3>
+                        <p>Setiap Hari</p>
+                        <strong>Kecuali Lagi Healing/Sibuk</strong>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">🚗</div>
+                    <div>
+                        <h3>Servis Panggilan</h3>
+                        <p>
+                            Tidak bisa datang langsung?
+                            Kami bisa datang ke lokasi kamu.
+                        </p>
+                    </div>
+                </div>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=P9F6%2B5QF%2C%20Akar%20Akar%2C%20Bayan%2C%20Lombok%20Utara%2C%20Nusa%20Tenggara%20Barat"
+                    target="_blank"
+                    class="maps-button"
+                >
+                    Buka Google Maps
+                </a>
+
+            </div>
+
+            <!-- MAP SATELIT -->
+            <div class="map-wrapper">
+
+                <div id="satellite-map"></div>
+
+                <div class="map-label">
+                    <span>🛰️</span>
+                    Tampilan Satelit
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LEAFLET CSS -->
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<!-- LEAFLET JS -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-icon">🖨️</span>
+                    <span>Service Printer<span>JosJis</span></span>
+                </a>
+
+                <p>
+                    Solusi servis printer cepat,
+                    mudah dan terpercaya.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Layanan</h4>
+                    <a href="#layanan">Servis Printer</a>
+                    <a href="#layanan">Cleaning</a>
+                    <a href="#layanan">Isi Tinta</a>
+                    <a href="#layanan">Maintenance</a>
+                </div>
+
+                <div>
+                    <h4>Website</h4>
+                    <a href="#home">Home</a>
+                    <a href="#harga">Harga</a>
+                    <a href="#galeri">Galeri</a>
+                    <a href="#booking">Booking</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2026 Service Printer JosJis. All Rights Reserved.
+        </div>
 
     </footer>
 
 
-    <!-- ================= WHATSAPP ================= -->
+    <!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/081997889727"
+   target="_blank"
+   class="whatsapp-btn">
 
-    <a
-        href="https://wa.me/6281997889727"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-    >
-        WhatsApp
-    </a>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat WhatsApp</span>
+
+</a>
+
+
 
 
     <script src="script.js"></script>
 
 </body>
 </html>
+
